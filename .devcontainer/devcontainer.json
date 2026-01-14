@@ -1,13 +1,19 @@
 {
-  "name": "python-dev",
-  "dockerComposeFile": "../docker-compose.yaml", 
-  "service": "app", 
+  "name": "mail_categorizer",
+  "dockerComposeFile": "./docker-compose.yaml",
+  "service": "app",
   "workspaceFolder": "/app",
+  "postCreateCommand": "chmod +x ./cmd.sh && chmod +x ./entrypoint.sh",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true,
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   }

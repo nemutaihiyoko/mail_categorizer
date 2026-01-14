@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    container_name: mail_categorizer_dev_container
+    volumes:
+      - ../:/app:cached
+    working_dir: /app
+    command: sleep infinity
