@@ -31,6 +31,7 @@ show_available_commands () {
 
     if [ "$(pwd)" = "$dev_container_workdir" ]; then
         echo "  run    - Run the application inside the development container"
+        echo "  test   - Run tests inside the development container"
     fi
 }
 
@@ -55,6 +56,11 @@ case "$cmd" in
         check_is_inside_container
         cd src
         ./entrypoint.sh
+        ;;
+    "test")
+        check_is_inside_container
+        cd test
+        ./run_tests.sh
         ;;
     "help")
         show_available_commands

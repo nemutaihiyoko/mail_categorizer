@@ -3,7 +3,7 @@
   "dockerComposeFile": "./docker-compose.yaml",
   "service": "app",
   "workspaceFolder": "/app",
-  "postCreateCommand": "chmod +x ./cmd.sh && chmod +x ./entrypoint.sh",
+  "postCreateCommand": "chmod +x ./cmd.sh && chmod +x ./src/entrypoint.sh && chmod +x ./test/run_tests.sh",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true,
   "customizations": {
