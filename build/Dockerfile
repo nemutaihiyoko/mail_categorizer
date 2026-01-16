@@ -11,9 +11,6 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# entrypoint.shをコピー
-COPY ./entrypoint.sh .
-RUN chmod +x ./entrypoint.sh
-
 # アプリケーションコードをコピー
 COPY ./src .
+RUN chmod +x ./entrypoint.sh

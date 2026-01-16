@@ -53,6 +53,7 @@ case "$cmd" in
         ;;
     "run")
         check_is_inside_container
+        cd src
         ./entrypoint.sh
         ;;
     "help")

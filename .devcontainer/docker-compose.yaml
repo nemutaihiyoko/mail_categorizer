@@ -3,7 +3,7 @@ services:
     build:
       context: ../
       dockerfile: .devcontainer/Dockerfile
-    container_name: mail_categorizer_dev_container
+    container_name: mail_categorizer_dev
     volumes:
       - ../:/app:cached
     working_dir: /app
