@@ -7,7 +7,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 
 
 class GmailService:
-    def __init__(self, credentials_path="credentials.json", token_path="token.json"):
+    def __init__(self, credentials_path="../credentials.json", token_path="../token.json"):
         self.scopes = ["https://www.googleapis.com/auth/gmail.readonly"]
         self.creds = None
         self._authenticate(credentials_path, token_path)

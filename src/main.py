@@ -8,7 +8,7 @@ from infrastructure.llm_service import GeminiService
 from domain.filter_sensitive_data import gmailFilter
 from domain.classifier_prompt import PromptBuilder
 
-load_dotenv(".env")
+load_dotenv("../.env")
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     print("GEMINI_API_KEYが設定されていません。")
@@ -17,6 +17,8 @@ max_gmails_per_request = int(os.getenv("MAX_GMAILS_PER_REQUEST", 3))
 
 def main():
     categories = ["仕事", "プライベート", "スパム"]
+    sensitive_keywords = []
+    unread_addresses = []
     parser = argparse.ArgumentParser(description="Gmail分類ツール")
     parser.add_argument("--config_file", type=str, help="設定用JSONファイルを指定")
     config_file = parser.parse_args().config_file
