@@ -3,3 +3,5 @@ token.json
 credentials.json
 config.json
 __pycache__/
+
+._*.sh
