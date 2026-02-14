@@ -4,7 +4,7 @@ args=("$@")
 cmd="${args[0]}"
 cmd_args=("${args[@]:1}")
 
-dev_container_workdir="/apiserver"
+dev_container_workdir="/app/apiserver"
 
 check_is_inside_container () {
     if [ "$(pwd)" != "$dev_container_workdir" ]; then
