@@ -2,9 +2,9 @@
   "name": "mail_categorizer_apiserver",
   "dockerComposeFile": "./docker-compose.yaml",
   "service": "apiserver",
-  "workspaceFolder": "/apiserver",
+  "workspaceFolder": "/workspace/repo/apiserver",
   "mounts": [
-    "source=${localWorkspaceFolder}/../.git,target=/apiserver/.git,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder}/..,target=/workspace/repo,type=bind,consistency=cached"
   ],
   "postCreateCommand": "chmod +x ./cmd.sh && chmod +x ./src/entrypoint.sh && chmod +x ./test/run_tests.sh",
   "remoteUser": "vscode",
