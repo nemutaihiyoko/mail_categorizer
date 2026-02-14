@@ -1,10 +1,10 @@
 services:
-  app:
+  apiserver:
     build:
       context: ../
       dockerfile: .devcontainer/Dockerfile
-    container_name: mail_categorizer_dev
+    container_name: mail_categorizer_apiserver_dev
     volumes:
-      - ../:/app:cached
-    working_dir: /app
+      - ../:/apiserver:cached
+    working_dir: /apiserver
     command: sleep infinity

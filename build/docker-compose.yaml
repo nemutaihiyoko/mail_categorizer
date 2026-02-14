@@ -3,6 +3,6 @@ services:
     build:
       context: ../
       dockerfile: build/Dockerfile
-    container_name: mail_categorizer_app
-    working_dir: /app
+    container_name: mail_categorizer_apiserver_app
+    working_dir: /apiserver
     command: ./entrypoint.sh
