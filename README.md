@@ -1,35 +1,37 @@
 # mail_categorizer
 
-## What is 'mail_categorizer'
+## mail_categorizerとは
+メール情報を分類する
 
 
-## Quick Start
-### As a product
-if you just want to execute the application, just run the command:
-```sh
-./cmd.sh up
-```
+## クイックスタート
+### 本番実行
+- 本番実行する場合、以下のコマンドを実行する
+  ```sh
+  ./cmd.sh up
+  ```
+  docker imageが作成され、実行される
 
-if you want to see the logs, run the command:
-```sh
-./cmd.sh logs
-```
+- ログを確認したい場合、以下のコマンドを実行する
+  ```sh
+  ./cmd.sh logs
+  ```
 
-if you want to end the running application, run the command:
-```sh
-./cmd.sh down
-```
+- 実行を終了する場合、以下のコマンドを実行する
+  ```sh
+  ./cmd.sh down
+  ```
 
-### As a development
-This project is developed with devcontainer.
-So, if you want to develop this project, follow the instruction:
+### 開発環境
+このプロジェクトはDevcontainerを利用して開発することを前提としている。
+そのためVSCode及び、その拡張機能であるDevcontainerを事前にインストールしておくこと。
+セットアップ手順は以下の通り。
 
-1. Open this project in VSCode (*Extension 'Dev Containers' required)
-1. Click the blue button 'Reopen in Container' in the notification popup at the bottom right.
-    * The button does not appear? Don't worry, there is many ways to open in devcontainer. Please search and hope you solve that.
-1. Now your development environment has been configured!
+1. 本プロジェクト(`mail_categorizer`)をVSCodeで開く
+1. 右下に現れる「Reopen in Container」という青いボタンを押すなどし、Devcontainerを開く
+1. セットアップ完了(初回は時間がかかる場合がある)
 
-If you want to run the application in the container, run the command:
+ターミナルをVSCodeで開き、以下のコマンドを実行することでアプリケーションを実行できる
 ```sh
 ./cmd.sh run
 ```
@@ -65,7 +67,7 @@ Gmailからメール取得するためのセットアップ手順。以下の手
 1. クライアントの作成が完了すると、ポップアップが表示される。下にスクロールして「JSONをダウンロード」を押下。
 2. ダウンロードしたファイルの名前を `credentials.json` に変更し、このプロジェクトのルートディレクトリに配置。
 
-Note: 初回実行時にブラウザが起動して、Googleアカウントでの認証が求められる。
+Note: 初回実行時にブラウザが起動して、Googleアカウントでの認証が求められる。このとき、公開ステータスがテスト中の場合、テストユーザーを登録する必要がある。ログイン可能なgmailでユーザーを追加すること。
 
 ### Gemini API
 Geminiを使用する場合のセットアップ手順。Gemini APIキーを取得し、`.env`に設定する。
