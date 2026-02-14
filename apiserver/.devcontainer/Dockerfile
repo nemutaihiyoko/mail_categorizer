@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-WORKDIR /apiserver
+WORKDIR /app
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -19,5 +19,5 @@ RUN groupadd --gid $USER_GID $USERNAME \
 RUN pip install --upgrade pip
 
 # 依存関係（キャッシュを効かせる）
-COPY requirements.txt .
+COPY apiserver/requirements.txt .
 RUN pip install -r requirements.txt

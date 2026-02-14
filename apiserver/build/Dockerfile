@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-WORKDIR /apiserver
+WORKDIR /app
 
 RUN apt-get update
 

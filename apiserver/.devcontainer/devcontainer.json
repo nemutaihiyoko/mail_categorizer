@@ -1,11 +1,8 @@
 {
   "name": "mail_categorizer_apiserver",
   "dockerComposeFile": "./docker-compose.yaml",
-  "service": "apiserver",
-  "workspaceFolder": "/workspace/repo/apiserver",
-  "mounts": [
-    "source=${localWorkspaceFolder}/..,target=/workspace/repo,type=bind,consistency=cached"
-  ],
+  "service": "app",
+  "workspaceFolder": "/app/apiserver",
   "postCreateCommand": "chmod +x ./cmd.sh && chmod +x ./src/entrypoint.sh && chmod +x ./test/run_tests.sh",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true,
