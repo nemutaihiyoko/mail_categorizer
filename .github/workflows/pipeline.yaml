@@ -22,10 +22,12 @@ jobs:
       
       - name: Install Dependencies
         run: |
+          cd apiserver
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run Unit Tests
         run: |
+          cd apiserver
           chmod +x ./cmd.sh && chmod +x ./test/run_tests.sh
           ./test/run_tests.sh
