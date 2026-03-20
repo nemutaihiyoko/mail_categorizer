@@ -3,10 +3,9 @@ services:
     build:
       context: ../../
       dockerfile: apiserver/.devcontainer/Dockerfile
+    image: mail_categorizer_apiserver_dev:latest
     container_name: mail_categorizer_apiserver_dev
     volumes:
       - ../../:/app:cached
-      - ~/.gitconfig:/home/vscode/.gitconfig:ro
-      - ~/.ssh:/home/vscode/.ssh:ro
     working_dir: /app
     command: sleep infinity

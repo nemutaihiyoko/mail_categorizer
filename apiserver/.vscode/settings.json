@@ -6,5 +6,6 @@
         "mhutchie",
         "nemutaihiyoko",
         "pycache"
-    ]
+    ],
+    "python.defaultInterpreterPath": "python3"
 }
