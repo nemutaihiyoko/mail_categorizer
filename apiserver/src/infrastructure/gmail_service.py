@@ -40,7 +40,8 @@ class GmailService:
         results = (
             self.service.users()
             .messages()
-            .list(userId="me", maxResults=max_results, q=query)
+            .list(userId="me", maxResults=max_results)
+            # .list(userId="me", maxResults=max_results, q=query)
             .execute()
         )
         messages = results.get("messages", [])

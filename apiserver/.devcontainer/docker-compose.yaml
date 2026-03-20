@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ../../
+      dockerfile: apiserver/.devcontainer/Dockerfile
+    image: mail_categorizer_apiserver_dev:latest
+    container_name: mail_categorizer_apiserver_dev
+    volumes:
+      - ../../:/app:cached
+    working_dir: /app
+    command: sleep infinity

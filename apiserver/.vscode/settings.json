@@ -1,9 +1,11 @@
 {
     "cSpell.words": [
+        "apiserver",
         "dotenv",
         "eamodio",
         "mhutchie",
         "nemutaihiyoko",
         "pycache"
-    ]
+    ],
+    "python.defaultInterpreterPath": "python3"
 }
