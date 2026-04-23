@@ -1,6 +1,9 @@
 services:
-  dev:
-    image: mcr.microsoft.com/devcontainers/base:ubuntu
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mail_categorizer_dev
     container_name: mail_categorizer_dev
     volumes:
       - ../:/home/vscode/app:cached
