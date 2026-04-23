@@ -1,0 +1,31 @@
+{
+	"name": "Mail Categorizer",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "dev",
+	"workspaceFolder": "/home/vscode/app",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "24"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"streetsidesoftware.code-spell-checker",
+				"github.copilot-chat",
+				// python
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				// typescript
+				"ms-vscode.vscode-typescript-next"
+			]
+		}
+	}
+}

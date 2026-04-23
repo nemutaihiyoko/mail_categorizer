@@ -1,0 +1,24 @@
+services:
+  dev:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    container_name: mail_categorizer_dev
+    volumes:
+      - ../:/home/vscode/app:cached
+    command: sleep infinity
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: mail_categorizer_postgres
+    environment:
+      POSTGRES_DB: mail_categorizer
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
