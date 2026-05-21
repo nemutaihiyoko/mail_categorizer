@@ -93,6 +93,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Custom aliases for the project
+alias a='cd ~/app/apiserver'
+alias f='cd ~/app/frontend'
 alias runa='(cd ~/app/apiserver/resources/scripts && ./run.sh)'
 alias testa='(cd ~/app/apiserver/resources/scripts && ./test.sh)'
 alias runf='(cd ~/app/frontend/resources/scripts && ./run.sh)'
