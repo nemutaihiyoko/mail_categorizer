@@ -4,6 +4,8 @@
 メール情報を分類する
 
 ## Quick Start
+ドキュメントは[ココ](docs/README.md)
+
 ### 準備編
 1. このフォルダーをVSCodeで開く
 2. 左下の「><」みたいなボタンから、「Reopen in Container」 (VSCodeの拡張機能の一つDev Containersが必要)
