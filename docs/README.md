@@ -1,3 +1,5 @@
+[Mail Categorizer](../README.md)
+
 # docs
 
 ## 各種リンク一覧
