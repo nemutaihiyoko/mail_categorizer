@@ -167,3 +167,8 @@ if [[ "$TERM" == "xterm" ]]; then
     # Append to PROMPT_COMMAND to call precmd before displaying the prompt
     PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }precmd"
 fi
+
+# Activate the virtual environment if it exists
+if [ -f /home/vscode/app/apiserver/.venv/bin/activate ]; then
+    source /home/vscode/app/apiserver/.venv/bin/activate
+fi

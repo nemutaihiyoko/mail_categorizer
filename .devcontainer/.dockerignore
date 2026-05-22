@@ -1,0 +1,23 @@
+# Root level files
+README.md
+*.md
+.git
+.gitignore
+.github
+.vscode
+docs
+.env
+.env.local
+.DS_Store
+
+# Frontend (relative to .devcontainer)
+../frontend/node_modules
+../frontend/dist
+../frontend/.next
+
+# API Server (relative to .devcontainer)
+../apiserver/__pycache__
+../apiserver/.pytest_cache
+../apiserver/*.pyc
+../apiserver/*.pyo
+../apiserver/*.egg-info

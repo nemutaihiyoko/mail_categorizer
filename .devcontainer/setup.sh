@@ -10,11 +10,27 @@ chmod +x \
     ./frontend/resources/scripts/run.sh \
     ./frontend/resources/scripts/test.sh
 
+# =========================
+# apiserver
+# =========================
+
 cd ./apiserver
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+pip install --upgrade pip
 pip install -r requirements.txt
+
 cd ..
 
+# =========================
+# frontend
+# =========================
 
 cd ./frontend
+
 npm install
+
 cd ..

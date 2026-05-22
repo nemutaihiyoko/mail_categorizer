@@ -15,7 +15,6 @@
 ### 3. devcontainer.json
 起動したコンテナに対し、devcontainerとして利用するための設定のあれこれ。
 VSCode系の設定が多め。
-devcontainer-lock.jsonはこいつのおまけ。バージョンを固定するなどのために自動で生成されるものなので気にしなくて良い。
 
 ### 4. setup.sh
 devcontainer.jsonをもとにdevcontainerとして利用される直前に実行される。

@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.pytest_cache
+.vscode
+.DS_Store
+*.log
+.env
+.env.local
+venv
+env
+.coverage
+htmlcov
+dist
+build
