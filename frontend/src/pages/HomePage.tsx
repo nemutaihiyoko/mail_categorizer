@@ -2,12 +2,13 @@ import { useNavigate } from 'react-router-dom'
 import PageTitleText from '../components/text/custom/PageTitleText'
 import SmallText from '../components/text/common/SmallText'
 import Button from '../components/button/common/Button'
+import Content from '../components/global/content/Content'
 
 export default function HomePage() {
     const navigate = useNavigate()
 
     return (
-        <div>
+        <Content>
             <PageTitleText>ホーム</PageTitleText>
             <SmallText>ここは `/` に対応するサンプルのホーム画面です。</SmallText>
             <div style={{ marginTop: '24px' }}>
@@ -15,6 +16,6 @@ export default function HomePage() {
                     <SmallText>Sampleページへ</SmallText>
                 </Button>
             </div>
-        </div>
+        </Content>
     )
 }

@@ -7,6 +7,10 @@ from typing import List, Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+from fastapi.middleware.cors import CORSMiddleware
+
+from application.sample import sample
+
 from infrastructure.gmail_service import GmailService
 from infrastructure.llm_service import GeminiService
 from domain.filter_sensitive_data import gmailFilter
@@ -20,6 +24,16 @@ max_gmails_per_request = int(os.getenv("MAX_GMAILS_PER_REQUEST", 3))
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/api/sample")
+def sample_endpoint():
+    return sample()
 
 def _load_settings():
     """Load settings from settings.json"""

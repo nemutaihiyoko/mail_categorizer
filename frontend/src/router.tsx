@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import SamplePage from './pages/sample/SamplePage'
 import SampleDetailPage from './pages/sample/detail/SampleDetailPage'
 import NotFoundPage from './pages/NotFoundPage'
+import ApiPage from './pages/api/ApiPage'
 
 export const routeConfig: RouteObject[] = [
     {
@@ -18,6 +19,10 @@ export const routeConfig: RouteObject[] = [
                 element: <SampleDetailPage />,
             },
         ],
+    },
+    {
+        path: '/api',
+        element: <ApiPage />,
     },
     {
         path: '*',
